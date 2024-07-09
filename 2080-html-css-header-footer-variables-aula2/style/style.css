@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --color-primario: #FFFAE6;
+    --color-secundario: #FF9F66;
+    --color-terciario: #FF5F00;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans serif;
+    --fuente-krona: 'Krona One', sans serif;
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body{
+    
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.header{
+    padding: 2% 0% 0% 30%;
+
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario); 
+    text-decoration: none;
+
+}
+
+
+.titulo-destaque {
+    color: var(--color-terciario) ;
+}
+
+.presentacion {
+    padding: 6% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.presentacion__enlaces__link{
+      /* background-color: #22D4FD; */
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      border: 2px solid var(--color-terciario);
+      width: 50%;
+      text-align: center;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 21.5px 0;
+      text-decoration: none;
+      color: var(--color-secundario);
+      font-family: var(--fuente-montserrat);
+      svg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+      
+      }
+      
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+/*Esto funciona como un if, en todo caso de que nuestra pagina se reduzca a menos pixeles o mas sera lo la forma que tomara*/
+@media (max-width: 1200px){
+
+    .header{
+    padding: 10%;
+    }
+
+    .presentacion{
+    flex-direction : column-reverse ;
+    }
+}
+
+.empresa{
+
+    text-align: left;
+    color: var(--color-terciario);
+    font-size: 1.3rem;
+    font-family: var(--fuente-montserrat);
+}
+.actividades{
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+    font-size: 1.3rem;
+}
+
+/*.centro{
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}*/
+/*.centro{
+    padding: 4% 0% -1% 0%;
+
+}
+/*
+.centro{
+    display: flex;
+    gap: 80px;
+}
